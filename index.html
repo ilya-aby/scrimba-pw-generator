@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="container">
+            <h1 id="headline">Generate a <span class="green"><br>random password</h1>
+            <p id="subhead">Never use an insecure password again.</p>
+            <div id="password-container">
+                <p id="password"></p>
+                <button id="copy-button" onclick="copyPassword()">📋</button>
+            </div>
+            <div id="length-slider-container">
+                <label for="length-slider">Password length: <span id="length-value">30</span></label>
+                <input type="range" id="length-slider" min="8" max="40" value="30">
+            </div>
+            <div id="style-toggle-container">
+                <span>Password style:</span>
+                <div class="radio-group">
+                    <input type="radio" id="xkcd-style" name="password-style" value="xkcd" checked>
+                    <label for="xkcd-style">XKCD</label>
+                    <input type="radio" id="classic-style" name="password-style" value="classic">
+                    <label for="classic-style">Classic</label>
+                </div>
+            </div>
+            <button id="generate-password" onclick="generatePassword()">Generate Password</button>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
