@@ -198,20 +198,3 @@ body {
 #password.password-highlight-animation {
     animation: highlight 0.3s ease-in-out;
 }
-
-@media (max-width: 480px) {
-    #container {
-        margin: 15px auto; /* Further reduce margin on very small screens */
-        padding: 20px 15px; /* Further reduce padding on very small screens */
-    }
-
-    #headline {
-        font-size: 32px; /* Reduce font size for smaller screens */
-        line-height: 36px;
-    }
-
-    #subhead {
-        font-size: 18px; /* Reduce font size for smaller screens */
-        line-height: 24px;
-    }
-}
