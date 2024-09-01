@@ -35,6 +35,7 @@ function generatePassword() {
                 password += spacerChar;
                 remainingLength--;
             }
+            password = password.charAt(0).toUpperCase() + password.slice(1);
         }
     } else {
         for (let i = 0; i < passwordLength; i++) {
@@ -43,21 +44,17 @@ function generatePassword() {
         }
     }
 
-    // Animate the password generation
     const passwordElement = document.getElementById("password");
     passwordElement.textContent = password;
-    passwordElement.classList.add('password-generated');
-    setTimeout(() => passwordElement.classList.remove('password-generated'), 300);
 }
 
 function copyPassword() {
     const passwordElement = document.getElementById("password");
     const password = passwordElement.textContent;
-    const copyButton = document.getElementById("copy-button");
     navigator.clipboard.writeText(password)
         .then(() => {
-            copyButton.textContent = '✅';
-            setTimeout(() => copyButton.textContent = '📋', 750);
+            passwordElement.classList.add('password-highlight-animation');
+            setTimeout(() => passwordElement.classList.remove('password-highlight-animation'), 300);
         })
         .catch(err => {
             console.error('Failed to copy: ', err);
