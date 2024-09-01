@@ -1,6 +1,8 @@
 # Password Generator
 
-A simple, interactive password generator web application.
+A simple, interactive password generator web application, made for the Scrimba front-end developer course.
+
+Modifications from spec include copy-to-clipboard & XKCD-style password generation from a wordlist.
 
 ![Password Generator Screenshot](images/password-generator-animation.gif)
 
