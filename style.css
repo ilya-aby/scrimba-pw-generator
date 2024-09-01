@@ -4,15 +4,18 @@ body {
 }
 
 #container {
+    box-sizing: border-box;
     background-color: #1F2937;
-    margin: 62px auto;
-    width: 550px;
-    height: 550px;
+    margin: 30px auto;
+    width: 100%;
+    max-width: 600px;
+    min-height: 550px;
     display: flex;
     justify-content: center;
     align-items: start;
     flex-direction: column;
-    padding-left: 52px;
+    padding: 0 52px;
+    border-radius: 10px;
 }
 
 #headline {
@@ -41,7 +44,8 @@ body {
     position: relative;
     margin-top: 20px;
     margin-bottom: 20px;
-    width: 400px;
+    width: 100%;
+    max-width: 500px;
 }
 
 #password {
@@ -52,9 +56,8 @@ body {
     background: #273549;
     width: 100%;
     height: 32px;
+    line-height: 32px;
     border-radius: 6px;
-    display: flex;
-    align-items: center;
     padding: 0 40px 0 10px; /* Right padding for button */
     margin: 0;
     box-sizing: border-box;
@@ -106,7 +109,8 @@ body {
 
 #length-slider-container {
     margin-top: 20px;
-    width: 211px;
+    width: 100%;
+    max-width: 268px;
 }
 
 #length-slider-container label {
@@ -193,4 +197,21 @@ body {
 
 #password.password-highlight-animation {
     animation: highlight 0.3s ease-in-out;
+}
+
+@media (max-width: 480px) {
+    #container {
+        margin: 15px auto; /* Further reduce margin on very small screens */
+        padding: 20px 15px; /* Further reduce padding on very small screens */
+    }
+
+    #headline {
+        font-size: 32px; /* Reduce font size for smaller screens */
+        line-height: 36px;
+    }
+
+    #subhead {
+        font-size: 18px; /* Reduce font size for smaller screens */
+        line-height: 24px;
+    }
 }
