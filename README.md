@@ -2,7 +2,7 @@
 
 A simple, interactive password generator web application.
 
-![Password Generator Screenshot](images/password-generator-screenshot.png)
+![Password Generator Screenshot](images/password-generator-animation.gif)
 
 ## Features
 
